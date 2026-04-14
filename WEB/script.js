@@ -1,11 +1,3 @@
-const firebaseConfig = {
-   apiKey: "AIzaSyCek3KdU6pmh4mPpeKLC7C0hasla8cZBxA",
-  authDomain: "clipsync-38b6c.firebaseapp.com",
-  projectId: "clipsync-38b6c",
-  storageBucket: "clipsync-38b6c.firebasestorage.app",
-  messagingSenderId: "624965860131",
-  appId: "1:624965860131:web:1b3546e009279550bb6a96"
-};
 
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
