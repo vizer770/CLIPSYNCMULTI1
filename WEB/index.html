@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClipSync Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #f4f7f6; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .container { background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); width: 100%; max-width: 400px; }
+        h2 { color: #1a73e8; margin-top: 0; }
+        input, textarea { width: 100%; padding: 12px; margin: 8px 0; border: 1px solid #ddd; border-radius: 8px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background: #1a73e8; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600; margin-top: 10px; }
+        button:hover { background: #1557b0; }
+        #syncWindow { background: #e8f0fe; padding: 15px; border-radius: 8px; margin: 15px 0; min-height: 50px; border-left: 4px solid #1a73e8; word-break: break-all; }
+        .status { font-size: 12px; color: #34a853; font-weight: bold; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>ClipSync Web</h2>
+        
+        <div id="loginSection">
+            <input type="email" id="email" placeholder="Email Address">
+            <input type="password" id="pass" placeholder="Password">
+            <button onclick="login()">Connect to Phone</button>
+        </div>
+
+        <div id="syncSection" style="display:none;">
+            <div class="status">● Connected & Syncing</div>
+            <label style="font-size: 12px; color: #666;">Incoming from Phone:</label>
+            <div id="syncWindow">Waiting for phone data...</div>
+            
+            <label style="font-size: 12px; color: #666;">Send to Phone:</label>
+            <textarea id="webInput" placeholder="Type here..."></textarea>
+            <button onclick="sendToPhone()" style="background: #34a853;">Push to Phone</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
