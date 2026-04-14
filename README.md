@@ -21,5 +21,5 @@ ClipSync allows you to instantly share clipboard text between an Android device 
 ## 📲 How to Install
 1. **Android:** Download the `app-debug.apk` from the **Releases** section.
 2. **Web:** Access the live dashboard here: https://clipsyncpc.netlify.app/ 
-3. **Login:** Use the same Email/Password on both devices to start syncing.
+3. **Login:** First Open App Then Sign up With Any Email And Password | Use the same Email/Password on both devices to start syncing.
 
